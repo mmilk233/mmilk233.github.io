@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>私人相册</title>
+  <style>
+    :root { --bg:#0f1220; --card:#1a1f33; --text:#e8ecf5; --muted:#9aa4bf; --accent:#6fd1c9; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:-apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      background:var(--bg); color:var(--text); padding:40px 20px;
+    }
+    .wrap { max-width:1000px; margin:0 auto; }
+    h1 { font-size:26px; text-align:center; margin-bottom:6px; }
+    .sub { text-align:center; color:var(--muted); margin-bottom:30px; font-size:14px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:18px; }
+    .photo { background:var(--card); border-radius:12px; overflow:hidden; }
+    /* 占位图：替换私人相册时，把下面的 <div class="ph"> 换成 <img src="data:image/...;base64,..."> 即可 */
+    .ph { aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;
+          color:var(--muted); font-size:14px;
+          background:linear-gradient(135deg,#2a3350,#3a4570); }
+    .photo p { padding:10px 14px; font-size:13px; color:var(--muted); }
+    footer { text-align:center; color:var(--muted); font-size:12px; margin-top:36px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>&#128274; 私人相册</h1>
+    <p class="sub">仅授权可见 · 本页内容已加密</p>
+    <div class="grid">
+
+      <!-- 复制整段 <div class="photo">…</div> 可继续添加；把 .ph 占位块换成你的照片 -->
+      <div class="photo">
+        <div class="ph">照片 1</div>
+        <p>照片说明 1</p>
+      </div>
+      <div class="photo">
+        <div class="ph">照片 2</div>
+        <p>照片说明 2</p>
+      </div>
+      <div class="photo">
+        <div class="ph">照片 3</div>
+        <p>照片说明 3</p>
+      </div>
+      <div class="photo">
+        <div class="ph">照片 4</div>
+        <p>照片说明 4</p>
+      </div>
+
+    </div>
+    <footer>&copy; 你的名字 · 加密私人相册</footer>
+  </div>
+</body>
+</html>
